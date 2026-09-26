@@ -1,0 +1,16 @@
+name = "skyline-ledger-keepalive"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+[vars]
+SUPABASE_URL = "https://uvwgotklgfhvqbcpdqqb.supabase.co"
+
+# Daily at 12:00 UTC (8:00 AM Eastern)
+[triggers]
+crons = ["0 12 * * *"]
+
+[observability]
+enabled = true
+
+# Secret (not stored here) — set once with:
+#   npx wrangler secret put SUPABASE_ANON_KEY
